@@ -1,3 +1,4 @@
+from __future__ import print_function
 from itertools import permutations
 import time;
 
@@ -7,8 +8,8 @@ def toString(List):
 
 f = open("Combinations.txt", "w")
 
-string = raw_input("Enter the String : ")
-cond=raw_input("Do you want to add @#$ in the String ? y for YES n for NO : ")
+string = input("Enter the String : ")
+cond=input("Do you want to add @#$ in the String ? y for YES n for NO : ")
 if(cond=='y'):
     string=string+"@#$" 
 letters = list(string)
@@ -21,7 +22,7 @@ f.close();
 m=" --- Combinations Generated ---"
 blah=list(m)
 for l in blah:
-    print(l),
+    print(l, end=" ")
     time.sleep(0.2)
 
 print("\nCombinations are stored in a file named \"Combinaiton.txt\" ")
